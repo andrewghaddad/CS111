@@ -1,0 +1,58 @@
+Hadamard Matrix
+
+READ number for array size
+INITIALIZE array rows and cols
+INITIALIZE boolean TO "true";
+
+
+// assigns boolean value to indexes
+FOR number /2 of rows 
+	FOR number /2 of cols
+		IF number of array size IS 1 THEN
+			array[0][0]= true;
+		ENDIF
+
+		IF array AT third index THEN
+			SET boolean to "false"
+		ELSE
+			SET boolean value to index
+		ENDIF
+
+	ENDIF
+ENDIF
+
+// translates boolean value to "T" or "F"
+FOR number of rows
+	FOR number of cols
+		...
+	ENDIF
+ENDIF
+
+
+
+       boolean H2N[][] = new boolean[N][N];
+       H2N[0][0] = true;
+       if(N > 1)
+       {
+           for(int k = 0; k<N; k+=2) //Controls Rows of the New Array H2N
+           {
+               for(int n = 0; n<N; n+= 2) //Controls Column of the New Array H2N
+               {
+                   for(int i = 0; i<2; i++) //Controls Rows of H2 Array
+                   {
+                       for(int j = 0; j<2; j++)
+                       {
+                           if(k >= (N/2) && n >= (N/2))
+                           {
+                               H2N[i+k][j+n] = !H2[i][j];
+                           }
+                           else
+                           {
+                               H2N[i+k][j+n] = H2[i][j];
+                           }
+                       }
+                   }
+               }
+           }
+       }
+       display(H2N);
